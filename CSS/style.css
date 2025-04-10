@@ -152,7 +152,7 @@ details:hover {
 }
 
 .image1 {
-    max-width: 250px;
+    max-width: 260px;
     height: fit-content;
     background-color: #f3f3f3;
     flex-shrink: 0;
