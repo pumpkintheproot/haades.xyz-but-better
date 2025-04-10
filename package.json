@@ -1,0 +1,24 @@
+{
+  "name": "haades.xyz-but-better",
+  "version": "1.0.0",
+  "description": "just a NON-personal bio page because I STOLE this code. check out da project this be forked from tho. kthx.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pumpkintheproot/haades.xyz-but-better.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pumpkintheproot/haades.xyz-but-better/issues"
+  },
+  "homepage": "https://github.com/pumpkintheproot/haades.xyz-but-better#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  }
+}
