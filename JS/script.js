@@ -1,6 +1,10 @@
+const apiKey = '6375d13681d6474eb3c16b71423a00f5'; // Replace with your Last.fm API key
+const username = 'koltontheshek'; // Replace with your Last.fm username
+const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json`;
+
 async function fetchNowPlaying() {
   try {
-    const response = await fetch('https://haades-backend.vercel.app/now-playing'); // Use the Vercel URL
+    const response = await fetch(apiUrl);
     const data = await response.json();
 
     if (data.recenttracks && data.recenttracks.track && data.recenttracks.track.length > 0) {
@@ -8,20 +12,17 @@ async function fetchNowPlaying() {
       const isNowPlaying = nowPlaying['@attr'] && nowPlaying['@attr'].nowplaying;
 
       if (isNowPlaying) {
-        const artist = nowPlaying.artist['#text'];
-        const track = nowPlaying.name;
-        document.getElementById('now-playing').innerText = `Now Playing: ${track} by ${artist}`;
+        console.log(`Now Playing: ${nowPlaying.artist['#text']} - ${nowPlaying.name}`);
       } else {
-        document.getElementById('now-playing').innerText = 'Not currently playing anything.';
+        console.log('No track is currently playing.');
       }
     } else {
-      document.getElementById('now-playing').innerText = 'No recent tracks found.';
+      console.log('No recent tracks found.');
     }
   } catch (error) {
-    console.error('Error fetching data from backend:', error);
-    document.getElementById('now-playing').innerText = 'Error fetching data.';
+    console.error('Error fetching data from Last.fm:', error);
   }
 }
 
+// Call the function to fetch and display the currently playing track
 fetchNowPlaying();
-setInterval(fetchNowPlaying, 30000);
