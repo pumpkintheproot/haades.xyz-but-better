@@ -1,1 +1,0 @@
-mogrify -format webp -quality 50 -define webp:lossless=true *.*

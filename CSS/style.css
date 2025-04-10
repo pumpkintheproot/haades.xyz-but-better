@@ -4,7 +4,7 @@
 
 body {
     font-family: "Lucida Console", Monaco, monospace;
-    background-image: url("/Images/image.png");
+    background-image: url("/Images/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-blend-mode: multiply;
@@ -18,15 +18,13 @@ body {
     margin: 0;
     padding: 0;
 }
-.sidenav {
-    background-color: rgb(27, 27, 27);
-    width: 10rem; /* adjust as needed */
-    display: flex;
-    height: 100vh;
-    padding-top: 1rem;
-    position: fixed;
 
-}
+.sidenav {width:160px; height:100%; padding: 16px; top: 0; left: 0; color:#f4f4f4; background-color: #181818; overflow-x: hidden; font-size:14px; display:inline-block; position:absolute;}
+.sidenav a:link {text-decoration:none;}
+.sidenav a:hover {color:#fff; background-color:#282828;}
+.sidenav a:active {color:#0090e0;}
+.sidenav>hr {border-style:dotted; border-width:1px 0 0 0; margin:8px 0 8px 0;}
+
 ul {
     font-size: 0.9rem;
     list-style-type: none;
@@ -77,7 +75,11 @@ li a:hover {
 
 }
 
-
+a {cursor:crosshair; border: 1px solid transparent; margin: 0px;}
+a:link {color:#0090e0;}
+a:visited {color:#0090e0;}
+a:hover {color:#181818;	border: 1px solid transparent; background-color:e6e6e6;}
+a:active {color:#fff;}
 
 hr {
     width: 7.7rem;
@@ -184,6 +186,7 @@ h2 {
     border-radius: 2px;
     margin: 0.5rem;
     text-indent: 10px;
+    text-align: left;
     
 
 }
