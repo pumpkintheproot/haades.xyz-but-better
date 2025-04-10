@@ -4,7 +4,7 @@
 
 body {
     font-family: "Lucida Console", Monaco, monospace;
-    background-image: url("/Images/image.png");
+    background-image: url("/Images/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-blend-mode: multiply;
@@ -186,6 +186,7 @@ h2 {
     border-radius: 2px;
     margin: 0.5rem;
     text-indent: 10px;
+    text-align: left;
     
 
 }
