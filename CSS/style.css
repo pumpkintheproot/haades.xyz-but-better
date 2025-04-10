@@ -53,8 +53,6 @@ li a::before {
 /* Change the link color and add animation on hover */
 li a:hover {
     color: white;
-    font-style: italic;
-    animation: hoverAnimation 0.1s ease-in-out;
 }
 
 @keyframes hoverAnimation {
